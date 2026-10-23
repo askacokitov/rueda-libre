@@ -22,6 +22,74 @@
             <p>¿Tienes dudas o preguntas? Escríbenos a nuestro correo: 
                 <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.
             </p>
+
+    <section>
+        <form action="../index.html" method="post">
+            <fieldset>
+                <legend>Tus datos</legend>
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <br>
+                    <br>
+                    <label for="correo">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <br>
+                    <label for="documento">Número de documento *</label>
+                    <input type="text" id="documento" name="documento" required>
+                    <br>
+                    <br>
+                    <label for="telefono">Celular *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                    <br>
+            </fieldset>
+            <fieldset>
+                <legend>Tu alquiler</legend>
+                    <label for="fecha">Fecha de alquiler </label>
+                    <input type="date" id="fecha" name="fecha" required>
+                    <br>
+                    <br>
+                    <label for="bicicleta">Tipo de bicicleta</label>
+                    <select id="bicicleta" name="bicicleta">
+                        <option value="seleccionar">Seleccionar</option>
+                        <option value="urbana">Urbana</option>
+                        <option value="montaña">Montaña</option>
+                        <option value="electrica">Eléctrica</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="plan">Plan </label>
+                    <br>
+                    <input type="radio" id="unaHora" name="unaHora" value="unaHora" required> Una hora <br>
+                    <input type="radio" id="medioDia" name="medioDia" value="medioDia" required> Medio día <br>
+                    <input type="radio" id="diaCompleto" name="diaCompleto" value="diaCompleto" required> Día completo <br>
+                    <br>
+                    <label for="cantidad">Cantidad de bicicletas</label>
+                    <input type="number" id="cantidad" name="cantidad" required>
+                    <br>
+                    <br>
+                    <label for="recorrido">Recorrido guiado</label>
+                    <select id="recorrido" name="recorrido">
+                        <option value="seleccionar">Seleccionar</option>
+                        <option value="rio">Río y parques</option>
+                        <option value="sabores">Sabores de Barrio</option>
+                        <option value="reto">Reto Las Palmas</option>
+                        <option value="ninguno">Ninguno</option>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <legend>Confirmación</legend>
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios"></textarea>
+                    <br>
+                    <br>
+                    <label for="politicasAlquiler">
+                        <input type="checkbox" id="politicasAlquiler" name="politicasAlquiler" required>
+                        He leído y acepto las Políticas de Alquiler *
+                    </label>
+            </fieldset>
+        </form>
+    </section>
  </main>
     <h2>Horario de atención</h2>
     <dl>
