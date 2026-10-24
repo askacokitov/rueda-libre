@@ -1,0 +1,29 @@
+:root {
+    /* 5 Colores */
+    --color-primary: #2b2d42;
+    --color-secondary: #8d99ae;
+    --color-background: #edf2f4;
+    --color-text: #2b2d42;
+    --color-accent: #ef233c;
+
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: var(--space-md);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
