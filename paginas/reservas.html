@@ -28,7 +28,7 @@
             <fieldset>
                 <legend>Tus datos</legend>
                     <label for="nombre">Nombre completo *</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <input type="text" id="nombre" name="nombre" minlength="3" required>
                     <br>
                     <br>
                     <label for="correo">Correo electrónico *</label>
@@ -36,11 +36,11 @@
                     <br>
                     <br>
                     <label for="documento">Número de documento *</label>
-                    <input type="text" id="documento" name="documento" required>
+                    <input type="text" id="documento" name="documento" minlength="6" maxlength="10" required >
                     <br>
                     <br>
                     <label for="telefono">Celular *</label>
-                    <input type="tel" id="telefono" name="telefono" required>
+                    <input type="tel" id="telefono" name="telefono" pattern="3\d{9}" maxlength="10" title="Debe tener 10 dígitos y comienza en 3">
                     <br>
             </fieldset>
             <fieldset>
@@ -50,7 +50,7 @@
                     <br>
                     <br>
                     <label for="bicicleta">Tipo de bicicleta</label>
-                    <select id="bicicleta" name="bicicleta">
+                    <select id="bicicleta" name="bicicleta" required>
                         <option value="seleccionar">Seleccionar</option>
                         <option value="urbana">Urbana</option>
                         <option value="montaña">Montaña</option>
@@ -65,7 +65,7 @@
                     <input type="radio" id="diaCompleto" name="diaCompleto" value="diaCompleto" required> Día completo <br>
                     <br>
                     <label for="cantidad">Cantidad de bicicletas</label>
-                    <input type="number" id="cantidad" name="cantidad" required>
+                    <input type="number" id="cantidad" name="cantidad" min="1" max="6" required>
                     <br>
                     <br>
                     <label for="recorrido">Recorrido guiado</label>
@@ -80,7 +80,7 @@
             <fieldset>
                 <legend>Confirmación</legend>
                     <label for="comentarios">Comentarios</label>
-                    <textarea id="comentarios" name="comentarios"></textarea>
+                    <textarea id="comentarios" name="comentarios" maxlength="300"></textarea>
                     <br>
                     <br>
                     <label for="politicasAlquiler">
@@ -88,6 +88,7 @@
                         He leído y acepto las Políticas de Alquiler *
                     </label>
             </fieldset>
+            <button type="submit">Enviar</button>
         </form>
     </section>
  </main>
