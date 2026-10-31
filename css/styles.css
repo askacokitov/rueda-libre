@@ -37,6 +37,26 @@ header {
     background-color: #ffffff;
     border-bottom: 1px solid var(--color-secondary);
     padding: var(--space-md) var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+header h1{
+    margin: 0;
+    order: 1;
+    font-size: 1.8rem;
+}
+header nav{
+    order: 2;
+}
+header > p{
+    order: 3;
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--color-secondary);
+    font-size: 0.95rem;
 }
 
 #menu {
@@ -216,7 +236,38 @@ input:focus, textarea:focus, select:focus {
 footer {
     background-color: var(--color-primary);
     color: #ffffff;
-    text-align: center;
     padding: var(--space-md);
     margin-top: var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    text-align: left;
+}
+
+footer > *{
+    flex: 1;
+    min-width: 220px;
+}
+
+footer h2{
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+footter p{
+    margin: 0 0 var(--space-sm) 0;
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+}
+footer a{
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+footer a:hover{
+    color: #ffffff;
 }
