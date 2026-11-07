@@ -3,142 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulta las tarifas de alquiler de bicicletas y los recorridos guiados en Rueda Libre.">
+    <meta name="description" content="Reserva tu bicicleta o recorrido guiado en Rueda Libre de forma rápida y sencilla.">
     <title>Reserva tu Bicicleta - Rueda Libre</title>
-    <head>
-    <meta charset="UTF-8">
-    <title>Mi Sitio</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYm1Npr535StMSxF0de/A7h4W1fibXL2g" crossorigin="anonymous">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-    <body>
-        <header>
+<body class="bg-light">
+
+    <header class="bg-white border-bottom py-3 px-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <a href="../index.html">
+                <img src="../imagenes/ruedaLibreLogo.jpeg" alt="Logo de Rueda Libre" width="160" class="rounded shadow-sm">
+            </a>
             <nav>
-                <ul>
-                    <li><a href="../index.html">← Inicio</a></li>
-                    <li><a href="tarifas.html">Tarifas y Rutas</a></li>
-                    <li><a href="reservas.html" class="activo">Servicios</a></li>
-            
+                <ul class="nav gap-2">
+                    <li class="nav-item"><a href="../index.html" class="nav-link px-3 py-2 rounded text-dark">← Inicio</a></li>
+                    <li class="nav-item"><a href="tarifas.html" class="nav-link px-3 py-2 rounded text-dark">Tarifas y Rutas</a></li>
+                    <li class="nav-item"><a href="reservas.html" class="nav-link activo px-3 py-2 rounded bg-dark text-white">Reservas</a></li>
                 </ul>
             </nav>
-        </header>
- <main>
-    <h1>Reserva tu Bicicleta</h1>
-            <p>¿Tienes dudas o preguntas? Escríbenos a nuestro correo: 
-                <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.
-            </p>
-        
-            <div class="reservas-layout"></div>
+        </div>
+    </header>
 
-    <section class="form-container">
-        <form action="../index.html" method="post">
-            <fieldset>
-                <legend>Tus datos</legend>
-                <div class="form-group">
-                    <label for="nombre">Nombre completo *</label>
-                    <input type="text" id="nombre" name="nombre" minlength="3" required>
-                </div>
-                    <br>
-                    <br>
-                <div class="form-group">
-                    <label for="correo">Correo electrónico *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                    <br>
-                    <br>
-                <div class="form-group">
-                    <label for="documento">Número de documento *</label>
-                    <input type="text" id="documento" name="documento" minlength="6" maxlength="10" required >
-                </div>
-                    <br>
-                    <br>
-                <div class="form-group">
-                    <label for="telefono">Celular *</label>
-                    <input type="tel" id="telefono" name="telefono" pattern="3\d{9}" maxlength="10" title="Debe tener 10 dígitos y comienza en 3">
-                </div>
-                    <br>
-            </fieldset>
-            <fieldset>
-                <legend>Tu alquiler</legend>
-                    <div class="form-group">
-                    <label for="fecha">Fecha de alquiler </label>
-                    <input type="date" id="fecha" name="fecha" required>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="form-group">
-                    <label for="bicicleta">Tipo de bicicleta</label>
-                    <select id="bicicleta" name="bicicleta" required>
-                        <option value="seleccionar">Seleccionar</option>
-                        <option value="urbana">Urbana</option>
-                        <option value="montaña">Montaña</option>
-                        <option value="electrica">Eléctrica</option>
-                    </select>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="form-group">
-                    <label for="plan">Plan </label>
-                    <br>
-                    <input type="radio" id="unaHora" name="unaHora" value="unaHora" required> Una hora <br>
-                    <input type="radio" id="medioDia" name="medioDia" value="medioDia" required> Medio día <br>
-                    <input type="radio" id="diaCompleto" name="diaCompleto" value="diaCompleto" required> Día completo <br>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                    <label for="cantidad">Cantidad de bicicletas</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" max="6" required>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="form-group">
-                    <label for="recorrido">Recorrido guiado</label>
-                    <select id="recorrido" name="recorrido">
-                        <option value="seleccionar">Seleccionar</option>
-                        <option value="rio">Río y parques</option>
-                        <option value="sabores">Sabores de Barrio</option>
-                        <option value="reto">Reto Las Palmas</option>
-                        <option value="ninguno">Ninguno</option>
-                    </select>
-                    </div>
-            </fieldset>
-            <fieldset>
-                <legend>Confirmación</legend>
-                    <div class="form-group">
-                    <label for="comentarios">Comentarios</label>
-                    <textarea id="comentarios" name="comentarios" maxlength="300"></textarea>
-                    </div>
-                    <br>
-                    <br>
-                    <label for="politicasAlquiler">
-                        <input type="checkbox" id="politicasAlquiler" name="politicasAlquiler" required>
-                        He leído y acepto las Políticas de Alquiler *
-                    </label>
-            </fieldset>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    <aside class="contacto-aside">Horario de atención>
-        <section class="horario">
-            <h2>Horario de atención</h2>
-    <dl>
-        <dt>Lunes a viernes </dt>
-        <dd>7:00 a.m. a 7:00 p.m.</dd>
-        <dt> Sábados, domingos y festivos</dt>
-        <dd>6:00 a.m. a 2:00 p.m.</dd>
-    </dl>
-        </section>
-    </aside>
- </main>
-    
-    <footer>
-        <p>Rueda Libre.
-            <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.
-            2026
-        </p>
+    <main class="container my-5">
+        <div class="mb-4">
+            <h1 class="h2 fw-bold">Reserva tu Bicicleta</h1>
+            <p class="text-secondary">¿Tienes dudas o preguntas? Escríbenos a nuestro correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.</p>
+        </div>
+
+        <div class="row g-4 align-items-start">
+            
+            <div class="col-12 col-md-8">
+                <section class="bg-white p-4 border rounded shadow-sm form-container">
+                    <form action="../index.html" method="post" class="needs-validation" novalidate>
+                        
+                        <fieldset class="border p-3 rounded mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary">Tus datos</legend>
+                            
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label small fw-semibold">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" minlength="3" required class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label small fw-semibold">Correo electrónico *</label>
+                                <input type="email" id="email" name="email" required class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="documento" class="form-label small fw-semibold">Número de documento *</label>
+                                <input type="text" id="documento" name="documento" minlength="6" maxlength="10" required class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label small fw-semibold">Celular *</label>
+                                <input type="tel" id="telefono" name="telefono" pattern="3\d{9}" maxlength="10" title="Debe tener 10 dígitos y comienza en 3" required class="form-control">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="border p-3 rounded mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary">Tu alquiler</legend>
+                            
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label small fw-semibold">Fecha de alquiler *</label>
+                                <input type="date" id="fecha" name="fecha" required class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="bicicleta" class="form-label small fw-semibold">Tipo de bicicleta *</label>
+                                <select id="bicicleta" name="bicicleta" required class="form-select">
+                                    <option value="" selected disabled>Seleccionar</option>
+                                    <option value="urbana">Urbana</option>
+                                    <option value="montaña">Montaña</option>
+                                    <option value="electrica">Eléctrica</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small fw-semibold d-block">Plan *</label>
+                                <div class="form-check">
+                                    <input type="radio" id="unaHora" name="plan" value="unaHora" required class="form-check-input">
+                                    <label for="unaHora" class="form-check-label small">Una hora</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="medioDia" name="plan" value="medioDia" required class="form-check-input">
+                                    <label for="medioDia" class="form-check-label small">Medio día</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="diaCompleto" name="plan" value="diaCompleto" required class="form-check-input">
+                                    <label for="diaCompleto" class="form-check-label small">Día completo</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cantidad" class="form-label small fw-semibold">Cantidad de bicicletas *</label>
+                                <input type="number" id="cantidad" name="cantidad" min="1" max="6" required class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="recorrido" class="form-label small fw-semibold">Recorrido guiado</label>
+                                <select id="recorrido" name="recorrido" class="form-select">
+                                    <option value="seleccionar">Seleccionar</option>
+                                    <option value="rio">Río y parques</option>
+                                    <option value="sabores">Sabores de Barrio</option>
+                                    <option value="reto">Reto Las Palmas</option>
+                                    <option value="ninguno">Ninguno</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="border p-3 rounded mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary">Confirmación</legend>
+                            
+                            <div class="mb-3">
+                                <label for="comentarios" class="form-label small fw-semibold">Comentarios</label>
+                                <textarea id="comentarios" name="comentarios" maxlength="300" rows="3" class="form-control"></textarea>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="politicasAlquiler" name="politicasAlquiler" required class="form-check-input">
+                                <label for="politicasAlquiler" class="form-check-label small">He leído y acepto las Políticas de Alquiler *</label>
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" class="btn btn-danger w-100 fw-bold py-2">Enviar Reserva</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <aside class="contacto-aside">
+                    <section class="bg-white p-4 border rounded shadow-sm horario">
+                        <h2 class="h5 fw-bold mb-3 text-dark">Horario de atención</h2>
+                        <dl class="mb-0">
+                            <dt class="fw-bold small text-primary">Lunes a viernes</dt>
+                            <dd class="text-secondary small mb-3">7:00 a.m. a 7:00 p.m.</dd>
+                            <dt class="fw-bold small text-primary">Sábados, domingos y festivos</dt>
+                            <dd class="text-secondary small mb-0">6:00 a.m. a 2:00 p.m.</dd>
+                        </dl>
+                    </section>
+                </aside>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="m-0 small text-secondary">Rueda Libre. <a href="mailto:hola@ruedalibre.example" class="text-white text-decoration-underline">hola@ruedalibre.example</a>. 2026</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzinyinh9ATkF5IkzSbJ8HecF" crossorigin="anonymous"></script>
 </body>
 </html>
