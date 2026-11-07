@@ -7,10 +7,6 @@
 
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
-
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
 }
 
 *, *::before, *::after {
@@ -28,13 +24,26 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--color-primary);
-    margin-top: 0;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+.btn-danger {
+    background-color: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+    font-family: var(--font-heading);
+}
+
+.btn-danger:hover {
+    background-color: #d90429 !important;
+    border-color: #d90429 !important;
 }
 
 table {
@@ -60,21 +69,4 @@ input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: var(--color-accent) !important;
     box-shadow: 0 0 5px rgba(239, 35, 60, 0.4) !important;
-}
-
-legend {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.btn-danger {
-    background-color: var(--color-accent) !important;
-    border-color: var(--color-accent) !important;
-    font-family: var(--font-heading);
-    font-weight: 700;
-}
-
-.btn-danger:hover {
-    opacity: 0.9;
 }
