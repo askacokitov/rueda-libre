@@ -1,72 +1,85 @@
+
 :root {
-    --color-primary: #2b2d42;
-    --color-secondary: #8d99ae;
-    --color-background: #edf2f4;
-    --color-text: #2b2d42;
-    --color-accent: #ef233c;
+    --bs-primary: #2b2d42;
+    --bs-primary-rgb: 43, 45, 66;
+    --bs-body-font-family: 'Open Sans', sans-serif;
+    --bs-body-color: #2b2d42;
+    --bs-body-bg: #edf2f4;
+    --bs-link-color: #ef233c;
+    --bs-link-hover-color: #d90429;
+    --bs-border-radius: 0.5rem;
 
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
+    --color-verde-ruta: #2a9d8f;
+    --color-verde-ruta-hover: #21867a;
+    --color-naranja-pedal: #f77f00;
+    --color-naranja-pedal-hover: #d96c00;
 }
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-body);
-    color: var(--color-text);
-    background-color: var(--color-background);
-    margin: 0;
-    padding: 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    color: var(--color-primary);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--bs-primary);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--color-verde-ruta);
+    --bs-btn-border-color: var(--color-verde-ruta);
+    --bs-btn-hover-bg: var(--color-verde-ruta-hover);
+    --bs-btn-hover-border-color: var(--color-verde-ruta-hover);
+    --bs-btn-active-bg: var(--color-verde-ruta-hover);
+    --bs-btn-active-border-color: var(--color-verde-ruta-hover);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.btn-naranja-pedal {
+    --bs-btn-bg: var(--color-naranja-pedal);
+    --bs-btn-border-color: var(--color-naranja-pedal);
+    --bs-btn-hover-bg: var(--color-naranja-pedal-hover);
+    --bs-btn-hover-border-color: var(--color-naranja-pedal-hover);
+    --bs-btn-color: #ffffff;
+    --bs-btn-hover-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.portada-personalizada {
+    background: linear-gradient(rgba(43, 45, 66, 0.8), rgba(43, 45, 66, 0.8)), url('../imagenes/bicicletaUrbana.png') center/cover no-repeat;
+    color: #ffffff;
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+}
+
+.titulo-seccion-estilizado {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+.titulo-seccion-estilizado::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #ef233c;
+}
+
+.footer-personalizado {
+    background-color: var(--bs-primary);
+    color: #ffffff;
+    border-top: 4px solid #ef233c;
 }
 
 .card {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(141, 153, 174, 0.2);
 }
-
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12) !important;
-}
-
-.btn-danger {
-    background-color: var(--color-accent) !important;
-    border-color: var(--color-accent) !important;
-    font-family: var(--font-heading);
-}
-
-.btn-danger:hover {
-    background-color: #d90429 !important;
-    border-color: #d90429 !important;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    font-size: 0.85rem;
-}
-
-th, td {
-    padding: 0.6rem 0.8rem;
-    border: 1px solid var(--color-secondary);
-    text-align: left;
-}
-
-th {
-    background-color: var(--color-primary);
-    color: #ffffff;
-    font-family: var(--font-heading);
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1) !important;
 }
 
 input:focus, textarea:focus, select:focus {
     outline: none;
-    border-color: var(--color-accent) !important;
-    box-shadow: 0 0 5px rgba(239, 35, 60, 0.4) !important;
+    border-color: #ef233c;
+    box-shadow: 0 0 0 0.25rem rgba(239, 35, 60, 0.25);
 }
