@@ -48,7 +48,13 @@
             <p class="text-secondary">¿Tienes dudas o preguntas? Escríbenos a nuestro correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.</p>
         </div>
 
+        <div class="alert alert-warning alert-dismissible fade show shadow-sm mb-4" role="alert">
+            <strong>¡Aviso importante!</strong> Recuerda tener a la mano tu <strong>número de documento físico</strong> al momento de reclamar tu equipo en nuestra sede principal.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+
         <div class="row g-4 align-items-start">
+            
             <div class="col-12 col-md-8">
                 <section class="bg-white p-4 border rounded shadow-sm form-container">
                     <form action="../index.html" method="post" class="needs-validation" novalidate>
@@ -59,21 +65,25 @@
                             <div class="mb-3">
                                 <label for="nombre" class="form-label small fw-semibold">Nombre completo *</label>
                                 <input type="text" id="nombre" name="nombre" minlength="3" required class="form-control">
+                                <div class="invalid-feedback">Por favor ingresa tu nombre completo (mínimo 3 caracteres).</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label small fw-semibold">Correo electrónico *</label>
                                 <input type="email" id="email" name="email" required class="form-control">
+                                <div class="invalid-feedback">Por favor ingresa un correo electrónico válido (ejemplo: usuario@correo.com).</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="documento" class="form-label small fw-semibold">Número de documento *</label>
                                 <input type="text" id="documento" name="documento" minlength="6" maxlength="10" required class="form-control">
+                                <div class="invalid-feedback">El número de documento es obligatorio y debe tener entre 6 y 10 dígitos.</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="telefono" class="form-label small fw-semibold">Celular *</label>
                                 <input type="tel" id="telefono" name="telefono" pattern="3\d{9}" maxlength="10" title="Debe tener 10 dígitos y comienza en 3" required class="form-control">
+                                <div class="invalid-feedback">El celular debe tener exactamente 10 dígitos y comenzar con el número 3.</div>
                             </div>
                         </fieldset>
 
@@ -83,6 +93,7 @@
                             <div class="mb-3">
                                 <label for="fecha" class="form-label small fw-semibold">Fecha de alquiler *</label>
                                 <input type="date" id="fecha" name="fecha" required class="form-control">
+                                <div class="invalid-feedback">Por favor selecciona una fecha válida para tu alquiler.</div>
                             </div>
 
                             <div class="mb-3">
@@ -93,6 +104,7 @@
                                     <option value="montaña">Montaña</option>
                                     <option value="electrica">Eléctrica</option>
                                 </select>
+                                <div class="invalid-feedback">Debes seleccionar un tipo de bicicleta disponible.</div>
                             </div>
 
                             <div class="mb-3">
@@ -108,12 +120,15 @@
                                 <div class="form-check">
                                     <input type="radio" id="diaCompleto" name="plan" value="diaCompleto" required class="form-check-input">
                                     <label for="diaCompleto" class="form-check-label small">Día completo</label>
+                                    <div class="invalid-feedback d-block"></div> <!-- Contenedor de apoyo para radios si aplica -->
                                 </div>
+                                <div class="invalid-feedback">Debes seleccionar una opción de plan de alquiler.</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="cantidad" class="form-label small fw-semibold">Cantidad de bicicletas *</label>
                                 <input type="number" id="cantidad" name="cantidad" min="1" max="6" required class="form-control">
+                                <div class="invalid-feedback">Indica la cantidad de bicicletas (mínimo 1, máximo 6).</div>
                             </div>
 
                             <div class="mb-3">
@@ -136,10 +151,15 @@
                                 <textarea id="comentarios" name="comentarios" maxlength="300" rows="3" class="form-control"></textarea>
                             </div>
 
-                            <div class="form-check">
+                            <div class="form-check mb-2">
                                 <input type="checkbox" id="politicasAlquiler" name="politicasAlquiler" required class="form-check-input">
                                 <label for="politicasAlquiler" class="form-check-label small">He leído y acepto las Políticas de Alquiler *</label>
+                                <div class="invalid-feedback">Debes aceptar las políticas de alquiler para continuar.</div>
                             </div>
+
+                            <button type="button" class="btn btn-link btn-sm text-decoration-underline p-0 text-danger fw-bold" data-bs-toggle="modal" data-bs-target="#modalPoliticas">
+                                Ver Políticas de Alquiler
+                            </button>
                         </fieldset>
 
                         <button type="submit" class="btn btn-danger w-100 fw-bold py-2">Enviar Reserva</button>
@@ -160,8 +180,33 @@
                     </section>
                 </aside>
             </div>
+
         </div>
     </main>
+
+    <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="modalPoliticasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5 fw-bold" id="modalPoliticasLabel">Políticas de Alquiler - Rueda Libre</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary small mb-3">Para garantizar una excelente experiencia y la seguridad de todos nuestros usuarios, por favor ten en cuenta las siguientes cinco políticas:</p>
+                    <ol class="small text-secondary mb-0 ps-3">
+                        <li class="mb-2"><strong>Uso obligatoria de elementos de seguridad:</strong> El casco y el candado suministrados deben utilizarse durante todo el trayecto del recorrido.</li>
+                        <li class="mb-2"><strong>Documento de identidad:</strong> Es requisito indispensable presentar un documento de identidad original válido al momento de retirar el equipo en la sede.</li>
+                        <li class="mb-2"><strong>Responsabilidad sobre el equipo:</strong> El usuario es responsable de la integridad física de la bicicleta durante el tiempo que dure el alquiler, incluyendo daños por mal uso.</li>
+                        <li class="mb-2"><strong>Puntualidad en la devolución:</strong> Las bicicletas deben ser devueltas en el horario acordado según el plan elegido. Exceder el tiempo generará una tarifa adicional.</li>
+                        <li><strong>Uso exclusivo en rutas permitidas:</strong> Las bicicletas urbanas y eléctricas deben transitar exclusivamente por ciclorrutas y vías pavimentadas aptas.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm fw-bold" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
@@ -170,5 +215,24 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzinyinh9ATkF5IkzSbJ8HecF" crossorigin="anonymous"></script>
+
+    <script>
+        (() => {
+          'use strict'
+
+          const forms = document.querySelectorAll('.needs-validation')
+
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
+    </script>
 </body>
 </html>
