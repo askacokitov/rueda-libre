@@ -203,6 +203,103 @@
             </div>
         </section>
 
+        <section id="inscripcion" class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-white border border-marca-gris/30 dark:bg-marca-azul dark:border-marca-gris/20 rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 space-y-6">
+                
+                <div class="text-center space-y-2">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-heading font-bold tracking-tight text-marca-azul dark:text-white uppercase">
+                        Inscríbete a la Rodada Nocturna
+                    </h2>
+                    <p class="text-marca-gris dark:text-slate-300 text-xs sm:text-sm md:text-base max-w-lg mx-auto">
+                        Completa el siguiente formulario con tus datos para asegurar tu cupo y equipamiento reflectivo.
+                    </p>
+                </div>
+
+                <form action="#" method="post" class="space-y-6">
+                    
+                    <fieldset class="border border-marca-gris/30 dark:border-marca-gris/20 p-4 sm:p-6 rounded-xl space-y-4">
+                        <legend class="px-2 font-heading font-bold text-marca-azul dark:text-amarillo-farol text-sm uppercase">
+                            1. Tus Datos Personales
+                        </legend>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            
+                            <div class="space-y-1 md:col-span-2">
+                                <label for="nombre" class="block text-xs sm:text-sm font-semibold text-marca-azul dark:text-slate-200">
+                                    Nombre completo <span class="text-marca-rojo dark:text-amarillo-farol">*</span>
+                                </label>
+                                <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Tu nombre y apellido" class="w-full bg-marca-bg dark:bg-[#0b0f19] border border-marca-gris/40 dark:border-marca-gris/30 rounded-lg px-4 py-3 text-sm text-marca-azul dark:text-white placeholder-marca-gris focus:outline-none focus:ring-2 focus:ring-marca-rojo dark:focus:ring-amarillo-farol transition-all">
+                            </div>
+
+                            <div class="space-y-1">
+                                <label for="email" class="block text-xs sm:text-sm font-semibold text-marca-azul dark:text-slate-200">
+                                    Correo electrónico <span class="text-marca-rojo dark:text-amarillo-farol">*</span>
+                                </label>
+                                <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com" class="w-full bg-marca-bg dark:bg-[#0b0f19] border border-marca-gris/40 dark:border-marca-gris/30 rounded-lg px-4 py-3 text-sm text-marca-azul dark:text-white placeholder-marca-gris focus:outline-none focus:ring-2 focus:ring-marca-rojo dark:focus:ring-amarillo-farol transition-all">
+                            </div>
+
+                            <div class="space-y-1">
+                                <label for="celular" class="block text-xs sm:text-sm font-semibold text-marca-azul dark:text-slate-200">
+                                    Número de celular <span class="text-marca-rojo dark:text-amarillo-farol">*</span>
+                                </label>
+                                <input type="tel" id="celular" name="celular" required pattern="3\d{9}" maxlength="10" title="Debe tener exactamente 10 dígitos y empezar por 3 (ej. 3001234567)" placeholder="3001234567" class="w-full bg-marca-bg dark:bg-[#0b0f19] border border-marca-gris/40 dark:border-marca-gris/30 rounded-lg px-4 py-3 text-sm text-marca-azul dark:text-white placeholder-marca-gris focus:outline-none focus:ring-2 focus:ring-marca-rojo dark:focus:ring-amarillo-farol transition-all">
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="border border-marca-gris/30 dark:border-marca-gris/20 p-4 sm:p-6 rounded-xl space-y-4">
+                        <legend class="px-2 font-heading font-bold text-marca-azul dark:text-amarillo-farol text-sm uppercase">
+                            2. Detalles de la Rodada
+                        </legend>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            
+                            <div class="space-y-1">
+                                <label for="ruta-select" class="block text-xs sm:text-sm font-semibold text-marca-azul dark:text-slate-200">
+                                    Selecciona tu Ruta <span class="text-marca-rojo dark:text-amarillo-farol">*</span>
+                                </label>
+                                <select id="ruta-select" name="ruta" required class="w-full bg-marca-bg dark:bg-[#0b0f19] border border-marca-gris/40 dark:border-marca-gris/30 rounded-lg px-4 py-3 text-sm text-marca-azul dark:text-white focus:outline-none focus:ring-2 focus:ring-marca-rojo dark:focus:ring-amarillo-farol transition-all">
+                                    <option value="" disabled selected>Elige una opción</option>
+                                    <option value="luces-centro">Luces del Centro (Fácil - $55.000)</option>
+                                    <option value="miradores">Miradores de la Ciudad (Medio - $75.000)</option>
+                                    <option value="las-palmas">Luna en Las Palmas (Difícil - $95.000)</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label for="acompanantes" class="block text-xs sm:text-sm font-semibold text-marca-azul dark:text-slate-200">
+                                    Acompañantes (0 a 3) <span class="text-marca-rojo dark:text-amarillo-farol">*</span>
+                                </label>
+                                <input type="number" id="acompanantes" name="acompanantes" required min="0" max="3" value="0" class="w-full bg-marca-bg dark:bg-[#0b0f19] border border-marca-gris/40 dark:border-marca-gris/30 rounded-lg px-4 py-3 text-sm text-marca-azul dark:text-white focus:outline-none focus:ring-2 focus:ring-marca-rojo dark:focus:ring-amarillo-farol transition-all">
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="border border-marca-gris/30 dark:border-marca-gris/20 p-4 sm:p-6 rounded-xl space-y-4">
+                        <legend class="px-2 font-heading font-bold text-marca-azul dark:text-amarillo-farol text-sm uppercase">
+                            3. Términos y Condiciones
+                        </legend>
+
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="terminos" name="terminos" required class="mt-1 w-4 h-4 text-marca-rojo bg-marca-bg border-marca-gris/40 rounded focus:ring-marca-rojo dark:focus:ring-amarillo-farol">
+                            <label for="terminos" class="text-xs sm:text-sm text-marca-gris dark:text-slate-300">
+                                Confirmo que he leído y acepto las políticas de alquiler, el uso obligatorio de casco y las normas de seguridad vial nocturna. <span class="text-marca-rojo dark:text-amarillo-farol">*</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="pt-2">
+                        <button type="submit" class="w-full btn-marca-principal cursor-pointer text-center py-4">
+                            Completar Inscripción Nocturna
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
         <section id="contacto" class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="bg-white border border-marca-gris/30 dark:bg-marca-azul dark:border-marca-gris/20 rounded-2xl shadow-xl p-6 sm:p-8 max-w-lg mx-auto space-y-5">
                 <div class="text-center space-y-2">
