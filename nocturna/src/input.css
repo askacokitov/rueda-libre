@@ -16,3 +16,16 @@
   --color-naranja-pedal: #f77f00;     
   --color-amarillo-farol: #FFD166; 
 }
+@layer components {
+  .btn-marca-principal {
+    @apply bg-marca-rojo hover:bg-[#d90429] text-white font-heading font-bold uppercase tracking-wider text-xs sm:text-sm px-6 py-3 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-marca-rojo/40;
+  }
+
+  .btn-marca-secundario {
+    @apply bg-verde-ruta hover:bg-[#21867a] text-white font-heading font-bold uppercase tracking-wider text-xs px-4 py-2 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-verde-ruta/40;
+  }
+
+  .btn-marca-alternativo {
+    @apply bg-naranja-pedal hover:bg-[#d96c00] text-white font-heading font-bold uppercase tracking-wider text-xs sm:text-sm px-6 py-3 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-naranja-pedal/40;
+  }
+}
