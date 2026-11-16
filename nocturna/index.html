@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edición Nocturna - Rueda Libre | Tailwind CLI</title>
+    <title>Edición Nocturna - Rueda Libre</title>
     
     <link rel="stylesheet" href="./src/output.css">
 
@@ -16,42 +16,49 @@
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 antialiased m-0 p-0">
+<body class="bg-slate-950 text-slate-100 antialiased m-0 p-0">
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
-        <section class="bg-slate-900 text-white rounded-2xl shadow-xl p-8 md:p-12 flex flex-col items-center text-center space-y-6">
-            
-            <h1 class="text-3xl md:text-5xl font-bold tracking-tight uppercase">
-                Edición Nocturna Rueda Libre
-            </h1>
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-md">
 
-            <p class="text-slate-300 text-base md:text-lg max-w-2xl leading-relaxed">
-                Descubre una nueva experiencia de movilidad urbana sostenible bajo las estrellas. Explora rutas exclusivas nocturnas por Medellín con asistencia total y equipamiento de alta visibilidad.
-            </p>
-
-            <div class="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                Compilado con CLI
+            <a href="#inicio" class="text-xl font-bold tracking-tight text-white uppercase flex items-center gap-2">
+                <span class="text-red-500">🌙</span> Rueda Libre Nocturna
+            </a>
+            <nav class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="#hero" class="hover:text-red-500 transition-colors">Inicio</a>
+                <a href="#rutas" class="hover:text-red-500 transition-colors">Rutas</a>
+                <a href="#como-funciona" class="hover:text-red-500 transition-colors">¿Cómo funciona?</a>
+                <a href="#contacto" class="hover:text-red-500 transition-colors">Contacto</a>
+            </nav>
+            <div>
+                <a href="componentes.html" class="bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider text-xs px-4 py-2 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
+                    Ver Kit UI
+                </a>
             </div>
+        </div>
+    </header>
 
-            <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
-                
-                <a href="../paginas/reservas.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider px-6 py-3 rounded-lg shadow-lg transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
-                    Inscríbete
-                </a>
-
-                <a href="../paginas/tarifas.html" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold uppercase tracking-wider px-6 py-3 rounded-lg shadow-lg transition-all focus:outline-none focus:ring-4 focus:ring-teal-400">
-                    Ver Tarifas
-                </a>
-
-                <a href="../index.html" class="inline-block border-2 border-white hover:bg-white hover:text-slate-900 text-white font-bold uppercase tracking-wider px-6 py-3 rounded-lg shadow-lg transition-all focus:outline-none focus:ring-4 focus:ring-white">
-                    Volver al Inicio
-                </a>
-
+    <main class="space-y-16 py-12">
+        
+        <section id="hero" class="max-w-6xl mx-auto px-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-8 md:p-16 flex flex-col items-center text-center space-y-6">
+                <h1 class="text-3xl md:text-5xl font-bold tracking-tight uppercase text-white">
+                    Edición Nocturna Rueda Libre
+                </h1>
+                <p class="text-slate-300 text-base md:text-lg max-w-2xl leading-relaxed">
+                    Descubre una nueva experiencia de movilidad urbana sostenible bajo las estrellas. Explora rutas exclusivas nocturnas por Medellín con asistencia total y equipamiento de alta visibilidad.
+                </p>
+                <div class="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                    Cupos Limitados
+                </div>
+                <div class="pt-4">
+                    <a href="#rutas" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider px-8 py-4 rounded-lg shadow-lg transition-all transform hover:-translate-y-0.5">
+                        Explorar Rutas
+                    </a>
+                </div>
             </div>
-
         </section>
-        <section id="rutas-nocturnas" class="mt-12 space-y-8">
-            
+
+        <section id="rutas" class="max-w-6xl mx-auto px-6 space-y-8">
             <div class="text-center space-y-2">
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white uppercase">
                     Rutas de la Campaña Nocturna
@@ -61,7 +68,7 @@
                 </p>
             </div>
 
-            <div class="space-y-6 max-w-xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <article class="bg-slate-900 border border-slate-800 rounded-2xl shadow-lg hover:shadow-2xl hover:border-red-600 transition-all duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-48 overflow-hidden relative">
@@ -70,11 +77,9 @@
                             Nivel: Fácil
                         </span>
                     </div>
-
                     <div class="p-6 flex flex-col flex-grow space-y-4">
                         <h3 class="text-xl font-bold text-white">Luces del Centro</h3>
-
-                        <ul class="space-y-2 border-t border-b border-slate-800 py-4">
+                        <ul class="space-y-2 border-t border-b border-slate-800 py-4 flex-grow">
                             <li class="flex justify-between items-center text-sm">
                                 <span class="text-slate-400">Distancia:</span>
                                 <span class="text-white font-semibold">10 km</span>
@@ -84,17 +89,16 @@
                                 <span class="text-white font-semibold">2 h</span>
                             </li>
                             <li class="flex justify-between items-center text-sm">
-                                <span class="text-slate-400">Punto de encuentro:</span>
-                                <span class="text-white font-semibold">Sede Rueda Libre</span>
+                                <span class="text-slate-400">Encuentro:</span>
+                                <span class="text-white font-semibold">Sede Principal</span>
                             </li>
                         </ul>
-
                         <div class="flex items-center justify-between pt-2">
                             <div>
                                 <span class="text-xs text-slate-400 block uppercase">Precio</span>
                                 <span class="text-2xl font-bold text-red-500">$55.000</span>
                             </div>
-                            <a href="../paginas/reservas.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider text-sm px-6 py-3 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
+                            <a href="componentes.html" class="bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider text-xs px-4 py-2 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
                                 Inscríbete
                             </a>
                         </div>
@@ -108,11 +112,9 @@
                             Nivel: Medio
                         </span>
                     </div>
-
                     <div class="p-6 flex flex-col flex-grow space-y-4">
                         <h3 class="text-xl font-bold text-white">Miradores de la Ciudad</h3>
-
-                        <ul class="space-y-2 border-t border-b border-slate-800 py-4">
+                        <ul class="space-y-2 border-t border-b border-slate-800 py-4 flex-grow">
                             <li class="flex justify-between items-center text-sm">
                                 <span class="text-slate-400">Distancia:</span>
                                 <span class="text-white font-semibold">16 km</span>
@@ -122,17 +124,16 @@
                                 <span class="text-white font-semibold">3 h</span>
                             </li>
                             <li class="flex justify-between items-center text-sm">
-                                <span class="text-slate-400">Punto de encuentro:</span>
-                                <span class="text-white font-semibold">Sede Rueda Libre</span>
+                                <span class="text-slate-400">Encuentro:</span>
+                                <span class="text-white font-semibold">Sede Principal</span>
                             </li>
                         </ul>
-
                         <div class="flex items-center justify-between pt-2">
                             <div>
                                 <span class="text-xs text-slate-400 block uppercase">Precio</span>
                                 <span class="text-2xl font-bold text-red-500">$75.000</span>
                             </div>
-                            <a href="../paginas/reservas.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider text-sm px-6 py-3 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
+                            <a href="componentes.html" class="bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider text-xs px-4 py-2 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
                                 Inscríbete
                             </a>
                         </div>
@@ -146,11 +147,9 @@
                             Nivel: Difícil
                         </span>
                     </div>
-
                     <div class="p-6 flex flex-col flex-grow space-y-4">
                         <h3 class="text-xl font-bold text-white">Luna en Las Palmas</h3>
-
-                        <ul class="space-y-2 border-t border-b border-slate-800 py-4">
+                        <ul class="space-y-2 border-t border-b border-slate-800 py-4 flex-grow">
                             <li class="flex justify-between items-center text-sm">
                                 <span class="text-slate-400">Distancia:</span>
                                 <span class="text-white font-semibold">22 km</span>
@@ -160,17 +159,16 @@
                                 <span class="text-white font-semibold">3,5 h</span>
                             </li>
                             <li class="flex justify-between items-center text-sm">
-                                <span class="text-slate-400">Punto de encuentro:</span>
-                                <span class="text-white font-semibold">Sede Rueda Libre</span>
+                                <span class="text-slate-400">Encuentro:</span>
+                                <span class="text-white font-semibold">Sede Principal</span>
                             </li>
                         </ul>
-
                         <div class="flex items-center justify-between pt-2">
                             <div>
                                 <span class="text-xs text-slate-400 block uppercase">Precio</span>
                                 <span class="text-2xl font-bold text-red-500">$95.000</span>
                             </div>
-                            <a href="../paginas/reservas.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider text-sm px-6 py-3 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
+                            <a href="componentes.html" class="bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider text-xs px-4 py-2 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
                                 Inscríbete
                             </a>
                         </div>
@@ -179,7 +177,92 @@
 
             </div>
         </section>
+
+        <section id="como-funciona" class="max-w-6xl mx-auto px-6 space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white uppercase">
+                    ¿Cómo funciona?
+                </h2>
+                <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
+                    Sigue estos cuatro sencillos pasos para unirte a nuestras rodadas nocturnas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow flex flex-col space-y-3">
+                    <span class="text-red-500 font-bold text-2xl">01</span>
+                    <h3 class="text-lg font-bold text-white">Elige tu ruta</h3>
+                    <p class="text-slate-400 text-sm">Revisa los niveles de dificultad y selecciona la rodada perfecta para ti.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow flex flex-col space-y-3">
+                    <span class="text-red-500 font-bold text-2xl">02</span>
+                    <h3 class="text-lg font-bold text-white">Inscríbete en línea</h3>
+                    <p class="text-slate-400 text-sm">Completa tus datos de contacto y asegura tu cupo de forma anticipada.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow flex flex-col space-y-3">
+                    <span class="text-red-500 font-bold text-2xl">03</span>
+                    <h3 class="text-lg font-bold text-white">Llega a la sede</h3>
+                    <p class="text-slate-400 text-sm">Preséntate 15 minutos antes para la entrega de tu bici y kit reflectivo.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow flex flex-col space-y-3">
+                    <span class="text-red-500 font-bold text-2xl">04</span>
+                    <h3 class="text-lg font-bold text-white">A rodar seguro</h3>
+                    <p class="text-slate-400 text-sm">Disfruta del recorrido nocturno guiado por las mejores zonas de la ciudad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="max-w-6xl mx-auto px-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-8 max-w-lg mx-auto space-y-6">
+                <div class="text-center space-y-2">
+                    <h2 class="text-xl font-bold text-white uppercase">¿Tienes Dudas?</h2>
+                    <p class="text-slate-400 text-sm">Escríbenos y te responderemos de inmediato.</p>
+                </div>
+                <form class="space-y-4" onsubmit="event.preventDefault();">
+                    <div>
+                        <label for="correo-contacto" class="block text-sm font-semibold text-slate-300 mb-1">Correo electrónico</label>
+                        <input type="email" id="correo-contacto" placeholder="tucorreo@ejemplo.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    </div>
+                    <div>
+                        <label for="mensaje" class="block text-sm font-semibold text-slate-300 mb-1">Mensaje</label>
+                        <textarea id="mensaje" rows="3" placeholder="¿En qué podemos ayudarte?" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider text-sm px-6 py-3 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-red-400">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+
     </main>
+
+    <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 text-sm mt-20">
+        <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start gap-8">
+            
+            <div class="space-y-3 max-w-xs">
+                <h3 class="text-white font-bold uppercase tracking-wider">Rueda Libre Nocturna</h3>
+                <p class="text-xs leading-relaxed">Promoviendo la movilidad urbana sostenible, segura y activa bajo las estrellas en Medellín.</p>
+            </div>
+
+            <div class="space-y-3">
+                <h3 class="text-white font-bold uppercase tracking-wider">Enlaces Rápidos</h3>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#hero" class="hover:text-red-500 transition-colors">Inicio</a></li>
+                    <li><a href="#rutas" class="hover:text-red-500 transition-colors">Rutas Nocturnas</a></li>
+                    <li><a href="#como-funciona" class="hover:text-red-500 transition-colors">¿Cómo funciona?</a></li>
+                    <li><a href="componentes.html" class="hover:text-red-500 transition-colors">Kit UI de Componentes</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h3 class="text-white font-bold uppercase tracking-wider">Contacto</h3>
+                <p class="text-xs">Sede Principal: Medellín, Colombia</p>
+                <p class="text-xs">Correo: <a href="mailto:hola@ruedalibre.example" class="text-red-500 hover:underline">hola@ruedalibre.example</a></p>
+                <p class="text-xs">© 2026 Rueda Libre. Todos los derechos reservados.</p>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 </html>
