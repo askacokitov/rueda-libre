@@ -1,30 +1,26 @@
-@import "tailwindcss";
-
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+@import "tailwindcss";
 
 @theme {
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
 
-  --color-marca-azul: #2b2d42;  
-  --color-marca-gris: #8d99ae;       
-  --color-marca-bg: #edf2f4;         
-  --color-marca-rojo: #ef233c;       
-  --color-verde-ruta: #2a9d8f;       
-  --color-naranja-pedal: #f77f00;     
-  --color-amarillo-farol: #FFD166; 
+  --color-marca-azul: #2b2d42;
+  --color-marca-gris: #8d99ae;
+  --color-marca-bg: #edf2f4;
+  --color-marca-rojo: #ef233c;
+  --color-verde-ruta: #2a9d8f;
+  --color-naranja-pedal: #f77f00;
+  --color-amarillo-farol: #FFD166;
 }
+
 @layer components {
   .btn-marca-principal {
     @apply bg-marca-rojo hover:bg-[#d90429] text-white font-heading font-bold uppercase tracking-wider text-xs sm:text-sm px-6 py-3 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-marca-rojo/40;
   }
-
   .btn-marca-secundario {
     @apply bg-verde-ruta hover:bg-[#21867a] text-white font-heading font-bold uppercase tracking-wider text-xs px-4 py-2 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-verde-ruta/40;
   }
-
   .btn-marca-alternativo {
     @apply bg-naranja-pedal hover:bg-[#d96c00] text-white font-heading font-bold uppercase tracking-wider text-xs sm:text-sm px-6 py-3 rounded-lg shadow transition-all focus:outline-none focus:ring-4 focus:ring-naranja-pedal/40;
   }
